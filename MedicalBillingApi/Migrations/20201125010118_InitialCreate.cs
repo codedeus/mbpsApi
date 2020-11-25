@@ -26,7 +26,7 @@ namespace MedicalBillingApi.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -39,7 +39,7 @@ namespace MedicalBillingApi.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     RoleId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -76,7 +76,8 @@ namespace MedicalBillingApi.Migrations
                     AccessFailedCount = table.Column<int>(nullable: false),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
-                    DepartmentId = table.Column<int>(nullable: false)
+                    DepartmentId = table.Column<int>(nullable: false),
+                    Role = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -94,11 +95,12 @@ namespace MedicalBillingApi.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(nullable: true),
                     BrandName = table.Column<string>(nullable: true),
                     IsActive = table.Column<bool>(nullable: false),
-                    DepartmentId = table.Column<int>(nullable: false)
+                    DepartmentId = table.Column<int>(nullable: false),
+                    Price = table.Column<decimal>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -116,7 +118,7 @@ namespace MedicalBillingApi.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     UserId = table.Column<string>(nullable: false),
                     ClaimType = table.Column<string>(nullable: true),
                     ClaimValue = table.Column<string>(nullable: true)
@@ -201,7 +203,7 @@ namespace MedicalBillingApi.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     FirstName = table.Column<string>(nullable: true),
                     LastName = table.Column<string>(nullable: true),
                     Created = table.Column<DateTime>(nullable: false),
@@ -225,40 +227,12 @@ namespace MedicalBillingApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Invoices",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    BillerId = table.Column<string>(nullable: true),
-                    IsActive = table.Column<bool>(nullable: false),
-                    HasPaid = table.Column<bool>(nullable: false),
-                    Number = table.Column<string>(nullable: true),
-                    InvoiceDate = table.Column<DateTime>(nullable: false),
-                    CustomerId = table.Column<int>(nullable: true),
-                    CustomerName = table.Column<string>(nullable: true),
-                    CustomerGender = table.Column<string>(nullable: true),
-                    CustomerDateOfBirth = table.Column<DateTime>(nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Invoices", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Invoices_AspNetUsers_BillerId",
-                        column: x => x.BillerId,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Receipts",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     Number = table.Column<string>(nullable: true),
-                    IsCancelled = table.Column<bool>(nullable: false),
                     PaymentDate = table.Column<DateTime>(nullable: false),
                     AmountPaid = table.Column<decimal>(nullable: false),
                     PaymentMode = table.Column<string>(nullable: true),
@@ -280,7 +254,7 @@ namespace MedicalBillingApi.Migrations
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     DrugId = table.Column<int>(nullable: false),
                     Quantity = table.Column<decimal>(nullable: false),
                     Date = table.Column<DateTime>(nullable: false),
@@ -306,11 +280,45 @@ namespace MedicalBillingApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Invoices",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    BillerId = table.Column<string>(nullable: true),
+                    IsActive = table.Column<bool>(nullable: false),
+                    HasPaid = table.Column<bool>(nullable: false),
+                    Number = table.Column<string>(nullable: true),
+                    InvoiceDate = table.Column<DateTime>(nullable: false),
+                    CustomerId = table.Column<int>(nullable: true),
+                    CustomerName = table.Column<string>(nullable: true),
+                    CustomerGender = table.Column<string>(nullable: true),
+                    CustomerAddress = table.Column<string>(nullable: true),
+                    CustomerDateOfBirth = table.Column<DateTime>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Invoices", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Invoices_AspNetUsers_BillerId",
+                        column: x => x.BillerId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_Invoices_Customers_CustomerId",
+                        column: x => x.CustomerId,
+                        principalTable: "Customers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "InvoiceItems",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                        .Annotation("Sqlite:Autoincrement", true),
                     InvoiceId = table.Column<int>(nullable: false),
                     HasPaid = table.Column<bool>(nullable: false),
                     Quantity = table.Column<decimal>(nullable: false),
@@ -351,8 +359,7 @@ namespace MedicalBillingApi.Migrations
                 name: "RoleNameIndex",
                 table: "AspNetRoles",
                 column: "NormalizedName",
-                unique: true,
-                filter: "[NormalizedName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetUserClaims_UserId",
@@ -383,8 +390,7 @@ namespace MedicalBillingApi.Migrations
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
-                unique: true,
-                filter: "[NormalizedUserName] IS NOT NULL");
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customers_CreatedById",
@@ -422,6 +428,11 @@ namespace MedicalBillingApi.Migrations
                 column: "BillerId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Invoices_CustomerId",
+                table: "Invoices",
+                column: "CustomerId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Receipts_CashierId",
                 table: "Receipts",
                 column: "CashierId");
@@ -450,9 +461,6 @@ namespace MedicalBillingApi.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "Customers");
-
-            migrationBuilder.DropTable(
                 name: "DrugStores");
 
             migrationBuilder.DropTable(
@@ -469,6 +477,9 @@ namespace MedicalBillingApi.Migrations
 
             migrationBuilder.DropTable(
                 name: "Receipts");
+
+            migrationBuilder.DropTable(
+                name: "Customers");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

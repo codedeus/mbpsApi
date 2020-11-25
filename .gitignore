@@ -2,6 +2,8 @@
 v15
 .vs
 bin
+Logs
+MbpsStore.db
 obj
 RadiologyImages
 ClerkingFiles

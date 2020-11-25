@@ -21,7 +21,7 @@ namespace MedicalBillingApi.Entities
 
                 if (!dbContext.Departments.Any())
                 {
-                    Department pharmacy = new Department {  Name = "Pharmacy" };
+                    Department pharmacy = new Department {  Name = "Pharmacy"};
                     Department lab = new Department { Name = "Laboratory" };
                     Department radiology = new Department {   Name = "Radiology" };
                     Department account = new Department{Name = "Accounts"};

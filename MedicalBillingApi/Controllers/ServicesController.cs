@@ -24,9 +24,9 @@ namespace MedicalBillingApi.Controllers
 
         // GET: api/Services
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Service>>> GetServices(int departmentId)
+        public async Task<ActionResult<IEnumerable<Service>>> GetServices(string department)
         {
-            var services = await _context.Services.Where(s => s.DepartmentId == departmentId).Select(s => new { s.Id, s.DepartmentId, s.Name, s.BrandName, s.Price }).ToListAsync();
+            var services = await _context.Services.Where(s => s.Department.Name == department).Select(s => new { s.Id, s.DepartmentId, s.Name, s.BrandName, s.Price }).ToListAsync();
             return Ok(services);
 
         }

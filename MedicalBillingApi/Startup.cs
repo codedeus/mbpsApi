@@ -38,7 +38,7 @@ namespace MedicalBillingApi
         public void ConfigureServices(IServiceCollection services)
         {
             var connectionString = Configuration.GetConnectionString("BillingStoreInstance");
-            services.AddDbContext<AppDataContext>(options => options.UseSqlServer(connectionString));
+            services.AddDbContext<AppDataContext>(options => options.UseSqlite("Data Source=MbpsStore.db"));
 
             services.AddIdentity<AppUser, IdentityRole>(opt =>
             {
