@@ -1,0 +1,141 @@
+
+2020-11-23 23:23:12.1708||DEBUG|MedicalBillingApi.Program|init main |url: |action: 
+
+2020-11-23 23:23:13.3690|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'DrugStore'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:23:13.3690|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'ItemPrice' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:23:13.3812|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:23:13.3812|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'AmountPaid' on entity type 'Receipt'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:23:13.3812|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Price' on entity type 'Service'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:23:13.6909|20102|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Invoices] ADD CONSTRAINT [FK_Invoices_Customers_CustomerId] FOREIGN KEY ([CustomerId])
+REFERENCES [Customers] ([Id]) ON DELETE NO ACTION; |url: |action: 
+
+2020-11-23 23:23:13.7083||ERROR|MedicalBillingApi.Extensions.MigrationManager|An error occurred while migrating the database. Microsoft.Data.SqlClient.SqlException (0x80131904): 
+The ALTER TABLE statement conflicted with the FOREIGN KEY constraint "FK_Invoices_Customers_CustomerId". The conflict occurred in database 
+"MedicalBillingStore", table "dbo.Customers", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at MedicalBillingApi.Extensions.MigrationManager.MigrateDatabase(IWebHost webHost) in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\Extensions\MigrationManager.cs:line 27
+ClientConnectionId:c5c8b910-7f62-443c-aca9-5f380022e5d5
+Error Number:547,State:0,Class:16|url: |action: 
+
+2020-11-23 23:31:50.1671|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'DrugStore'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:31:50.1940|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'ItemPrice' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:31:50.1940|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:31:50.1940|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'AmountPaid' on entity type 'Receipt'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:31:50.1940|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Price' on entity type 'Service'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:05.8902|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'DrugStore'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:05.9174|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'ItemPrice' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:05.9174|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:05.9174|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'AmountPaid' on entity type 'Receipt'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:05.9174|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Price' on entity type 'Service'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:15.1588||DEBUG|MedicalBillingApi.Program|init main |url: |action: 
+
+2020-11-23 23:32:16.4375|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'DrugStore'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:16.4478|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'ItemPrice' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:16.4478|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:16.4478|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'AmountPaid' on entity type 'Receipt'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:16.4478|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Price' on entity type 'Service'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:32:16.7850|20102|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Invoices] ADD CONSTRAINT [FK_Invoices_Customers_CustomerId] FOREIGN KEY ([CustomerId]) 
+REFERENCES [Customers] ([Id]) ON DELETE NO ACTION; |url: |action: 
+
+2020-11-23 23:32:16.8049||ERROR|MedicalBillingApi.Extensions.MigrationManager|An error occurred while migrating the database. Microsoft.Data.SqlClient.SqlException (0x80131904): The ALTER TABLE statement conflicted with the FOREIGN KEY constraint "FK_Invoices_Customers_CustomerId". The conflict occurred in database "MedicalBillingStore", table "dbo.Customers", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at MedicalBillingApi.Extensions.MigrationManager.MigrateDatabase(IWebHost webHost) in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\Extensions\MigrationManager.cs:line 27
+ClientConnectionId:656cb380-5557-49ab-8efb-477116f6022e
+Error Number:547,State:0,Class:16|url: |action: 
+
+2020-11-23 23:44:50.6813|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'DrugStore'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:44:50.7083|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'ItemPrice' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:44:50.7083|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:44:50.7099|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'AmountPaid' on entity type 'Receipt'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:44:50.7099|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Price' on entity type 'Service'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:06.5001|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'DrugStore'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:06.5270|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'ItemPrice' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:06.5270|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:06.5270|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'AmountPaid' on entity type 'Receipt'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:06.5270|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Price' on entity type 'Service'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:23.8872||DEBUG|MedicalBillingApi.Program|init main |url: |action: 
+
+2020-11-23 23:45:25.0823|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'DrugStore'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:25.0911|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'ItemPrice' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:25.0911|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Quantity' on entity type 'InvoiceItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:25.0911|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'AmountPaid' on entity type 'Receipt'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:25.0911|30000|WARN|Microsoft.EntityFrameworkCore.Model.Validation|No type was specified for the decimal column 'Price' on entity type 'Service'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values using 'HasColumnType()'. |url: |action: 
+
+2020-11-23 23:45:25.4308|20102|ERROR|Microsoft.EntityFrameworkCore.Database.Command|Failed executing DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+ALTER TABLE [Invoices] ADD CONSTRAINT [FK_Invoices_Customers_CustomerId] FOREIGN KEY ([CustomerId]) REFERENCES [Customers] ([Id]) 
+ON DELETE NO ACTION; |url: |action: 
+
+2020-11-23 23:45:25.4501||ERROR|MedicalBillingApi.Extensions.MigrationManager|An error occurred while migrating the database. Microsoft.Data.SqlClient.SqlException (0x80131904): The ALTER TABLE statement conflicted with the FOREIGN KEY constraint "FK_Invoices_Customers_CustomerId". The conflict occurred in database "MedicalBillingStore", table "dbo.Customers", column 'Id'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlCommand.RunExecuteNonQueryTds(String methodName, Boolean isAsync, Int32 timeout, Boolean asyncWrite)
+   at Microsoft.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, Boolean sendToPipe, Int32 timeout, Boolean& usedCache, Boolean asyncWrite, Boolean inRetry, String methodName)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteNonQuery(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Migrations.MigrationCommand.ExecuteNonQuery(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.MigrationCommandExecutor.ExecuteNonQuery(IEnumerable`1 migrationCommands, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.RelationalDatabaseFacadeExtensions.Migrate(DatabaseFacade databaseFacade)
+   at MedicalBillingApi.Extensions.MigrationManager.MigrateDatabase(IWebHost webHost) in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\Extensions\MigrationManager.cs:line 27
+ClientConnectionId:f19e480b-6a6c-4cff-adf4-77942e248ea7
+Error Number:547,State:0,Class:16|url: |action: 
