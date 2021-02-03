@@ -23,10 +23,24 @@ namespace MedicalBillingApi.Controllers
             _context = context;
         }
 
+        //[HttpGet]
+        //public async Task<ActionResult> Get()
+        //{
+        //    return Ok(await _context.Invoices.Where(i => i.HasPaid == false).Select(s => new { s.Id, s.Number,s.CustomerName }).ToListAsync());
+        //}
+
         [HttpGet]
-        public async Task<ActionResult> Get()
+        public async Task<ActionResult> Get(string searchText)
         {
-            return Ok(await _context.Invoices.Where(i => i.HasPaid == false).Select(s => new { s.Id, s.Number }).ToListAsync());
+            //var invoices = _context.Invoices.Where(i => i.HasPaid == false);
+            //if (!string.IsNullOrEmpty(searchText))
+            //{
+            //    searchText = searchText.Trim().ToLower();
+            //    invoices = invoices.Where(i => i.Number.Contains(searchText) || i.CustomerName.Contains(searchText));
+            //}
+            //return Ok(await invoices.Select(s => new { s.Id, s.Number, s.CustomerName,s.CustomerPhoneNumber }).ToListAsync());
+
+            return Ok(await _context.Invoices.Where(i => i.HasPaid == false).Select(s => new { s.Id, s.Number, s.CustomerName }).ToListAsync());
         }
 
         [HttpGet("{id}")]
@@ -39,6 +53,7 @@ namespace MedicalBillingApi.Controllers
                 s.CustomerDateOfBirth,
                 s.CustomerGender,
                 s.CustomerName,
+                s.CustomerPhoneNumber,
                 s.Number,
                 Services = s.InvoiceItems.Select(s => new { s.Id, s.Quantity, Price = s.ItemPrice, s.Item.Name, s.Item.BrandName }).ToList()
             }).FirstOrDefaultAsync());
@@ -61,7 +76,8 @@ namespace MedicalBillingApi.Controllers
                 HasPaid = false,
                 CustomerAddress = payload.CustomerAddress,
                 IsActive = true,
-                Number = ""
+                Number = "",
+                CustomerPhoneNumber = payload.CustomerPhoneNumber
             };
             var today = DateTime.Now;
             Customer customer = null;
@@ -92,7 +108,8 @@ namespace MedicalBillingApi.Controllers
                     LastName = payload.CustomerLastName,
                     MaritalState = null,
                     Number = "",
-                    ResidentialAddress = null
+                    ResidentialAddress = null,
+                    CustomerPhoneNumber = payload.CustomerPhoneNumber
                 };
                 invoice.Customer = customer;
             }

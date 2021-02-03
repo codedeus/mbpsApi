@@ -18,6 +18,7 @@ namespace MedicalBillingApi.Entities
         public string CustomerGender { get; set; }
         public string CustomerAddress { get; set; }
         public DateTime CustomerDateOfBirth { get; set; }
+        public string CustomerPhoneNumber { get; set; }
         public AppUser Biller { get; set; }
 
         public Customer Customer { get; set; }

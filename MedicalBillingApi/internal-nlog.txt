@@ -490,3 +490,84 @@
 2020-11-25 12:24:43.9146 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
 2020-11-25 12:24:43.9564 Info AppDomain Shutting down. Logger closing...
 2020-11-25 12:24:43.9653 Info Logger has been shut down.
+2020-11-29 16:32:05.1469 Info Message Template Auto Format enabled
+2020-11-29 16:32:05.1787 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 16:32:05.2915 Info Adding target FileTarget(Name=allfile)
+2020-11-29 16:32:05.3176 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 16:32:05.3784 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 16:32:06.6572 Info Configuring from an XML element in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config...
+2020-11-29 16:32:06.6687 Info Message Template Auto Format enabled
+2020-11-29 16:32:06.6796 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 16:32:06.6796 Info Adding target FileTarget(Name=allfile)
+2020-11-29 16:32:06.6987 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 16:32:06.6987 Info Closing old configuration.
+2020-11-29 16:32:06.7470 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 18:52:01.0799 Info Message Template Auto Format enabled
+2020-11-29 18:52:01.0856 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 18:52:01.1274 Info Adding target FileTarget(Name=allfile)
+2020-11-29 18:52:01.1274 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 18:52:01.1488 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\NLog.config
+2020-11-29 18:52:01.1488 Info Configuration initialized.
+2020-11-29 18:52:01.1488 Info NLog, Version=4.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c. File version: 4.7.2.11786. Product version: 4.7.2+024896f64b840a743d3fd89e29c2186681e7795f. GlobalAssemblyCache: False
+2020-11-29 18:52:02.1097 Info AppDomain Shutting down. Logger closing...
+2020-11-29 18:52:02.1352 Info Logger has been shut down.
+2020-11-29 18:52:11.5697 Info Message Template Auto Format enabled
+2020-11-29 18:52:11.6340 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 18:52:11.7793 Info Adding target FileTarget(Name=allfile)
+2020-11-29 18:52:11.8106 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 18:52:11.9079 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 18:52:13.8830 Info Configuring from an XML element in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config...
+2020-11-29 18:52:13.8985 Info Message Template Auto Format enabled
+2020-11-29 18:52:13.9192 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 18:52:13.9406 Info Adding target FileTarget(Name=allfile)
+2020-11-29 18:52:13.9593 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 18:52:13.9778 Info Closing old configuration.
+2020-11-29 18:52:14.0542 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 20:41:23.9200 Info Message Template Auto Format enabled
+2020-11-29 20:41:23.9360 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 20:41:23.9833 Info Adding target FileTarget(Name=allfile)
+2020-11-29 20:41:23.9936 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 20:41:24.0246 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 20:41:24.6135 Info Configuring from an XML element in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config...
+2020-11-29 20:41:24.6219 Info Message Template Auto Format enabled
+2020-11-29 20:41:24.6219 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 20:41:24.6219 Info Adding target FileTarget(Name=allfile)
+2020-11-29 20:41:24.6348 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 20:41:24.6348 Info Closing old configuration.
+2020-11-29 20:41:24.6598 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 21:02:35.7775 Info Message Template Auto Format enabled
+2020-11-29 21:02:35.8117 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 21:02:35.8753 Info Adding target FileTarget(Name=allfile)
+2020-11-29 21:02:35.8906 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 21:02:35.9469 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 21:02:36.7461 Info Configuring from an XML element in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config...
+2020-11-29 21:02:36.7461 Info Message Template Auto Format enabled
+2020-11-29 21:02:36.7567 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 21:02:36.7567 Info Adding target FileTarget(Name=allfile)
+2020-11-29 21:02:36.7567 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 21:02:36.7567 Info Closing old configuration.
+2020-11-29 21:02:36.7973 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 21:03:23.6701 Info Message Template Auto Format enabled
+2020-11-29 21:03:23.6856 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 21:03:23.7269 Info Adding target FileTarget(Name=allfile)
+2020-11-29 21:03:23.7475 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 21:03:23.7796 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 21:03:24.3509 Info Configuring from an XML element in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config...
+2020-11-29 21:03:24.3557 Info Message Template Auto Format enabled
+2020-11-29 21:03:24.3557 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 21:03:24.3557 Info Adding target FileTarget(Name=allfile)
+2020-11-29 21:03:24.3688 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 21:03:24.3688 Info Closing old configuration.
+2020-11-29 21:03:24.3931 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 21:04:53.3024 Info Message Template Auto Format enabled
+2020-11-29 21:04:53.3175 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 21:04:53.3676 Info Adding target FileTarget(Name=allfile)
+2020-11-29 21:04:53.3676 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 21:04:53.4115 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config
+2020-11-29 21:04:53.9862 Info Configuring from an XML element in C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config...
+2020-11-29 21:04:53.9862 Info Message Template Auto Format enabled
+2020-11-29 21:04:53.9952 Info Loading assembly: NLog.Web.AspNetCore
+2020-11-29 21:04:53.9952 Info Adding target FileTarget(Name=allfile)
+2020-11-29 21:04:53.9952 Info Adding target FileTarget(Name=ownFile-web)
+2020-11-29 21:04:54.0092 Info Closing old configuration.
+2020-11-29 21:04:54.0293 Info Validating config: TargetNames=allfile, ownFile-web, ConfigItems=49, FilePath=C:\Users\nwach\source\repos\MedicalBillingApi\MedicalBillingApi\bin\Debug\netcoreapp3.1\nlog.config

@@ -37,7 +37,7 @@ namespace MedicalBillingApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var connectionString = Configuration.GetConnectionString("BillingStoreInstance");
+            //var connectionString = Configuration.GetConnectionString("BillingStoreInstance");
             services.AddDbContext<AppDataContext>(options => options.UseSqlite("Data Source=MbpsStore.db"));
 
             services.AddIdentity<AppUser, IdentityRole>(opt =>

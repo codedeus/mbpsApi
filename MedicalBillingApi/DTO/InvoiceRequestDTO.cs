@@ -11,6 +11,7 @@ namespace MedicalBillingApi.DTO
         public string CustomerFirstName { get; set; }
         public string CustomerLastName { get; set; }
         public string CustomerGender { get; set; }
+        public string CustomerPhoneNumber { get; set; }
         public string CustomerAddress { get; set; }
         public DateTime CustomerDateOfBirth { get; set; }
         public bool SaveCustomer { get; set; }
